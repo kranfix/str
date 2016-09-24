@@ -7,6 +7,7 @@ typedef struct pid_handler_t {
   float ki;
   float T;
   float ui;
+  float u;
   float u_max;
   float u_min;
   float e_last;

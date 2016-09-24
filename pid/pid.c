@@ -1,10 +1,11 @@
-#include <pid.h>
+#include "pid.h"
 
 void pid_set(pid_handler_t * p, float kp, float ki, float kd, float T){
-  p->kp = kp + kd / Tl
+  p->kp = kp + kd / T;
   p->ki = ki * T;
   p->kd = - kd / T;
   p->T = T;
+  p->u = 0;
   p->ui = 0;
   p->u_max = 24;
   p->u_min = -p->u_max;
