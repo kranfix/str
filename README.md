@@ -6,4 +6,4 @@ Sistemas en Tiempo Real
 
 Se tienen los siguientes ejemplos:
 
-- [PID](pid)
+- [PID](pid): Simulación de un controlador PID con mutex y cond.
