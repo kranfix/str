@@ -9,6 +9,6 @@ typedef struct planta_handler_t {
   float *x;
 } planta_handler_t;
 
-void planta_run(planta_handler_t * p, float u);
+float planta_run(planta_handler_t * p, float u);
 
 #endif // PLANTA_H
