@@ -7,6 +7,7 @@ typedef struct planta_handler_t {
   float *B;
   float *C;
   float *x;
+  float y;
 } planta_handler_t;
 
 float planta_run(planta_handler_t * p, float u);

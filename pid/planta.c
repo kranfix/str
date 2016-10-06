@@ -12,5 +12,6 @@ float planta_run(planta_handler_t * p, float u){
     }
     p->x[i] = x;
   }
+  p->y = y;
   return y;
 }
