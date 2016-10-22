@@ -15,4 +15,4 @@ test: test.elf
 	./test.elf
 
 clean:
-	rm -f *.o *.elf
+	rm -f *.o *.elf *.txt
