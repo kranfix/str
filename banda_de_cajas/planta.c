@@ -47,9 +47,9 @@ void runBanda(banda_t * banda){
 
 // Lectura de sensores
 void leerSensores(banda_t * banda, int * A, int *B, int *D){
-  puts("    Leyendo sensores");
+  puts("   Leyendo sensores");
   *A = banda->casilla[0];
   *B = banda->casilla[banda->n - 1];
   *D = banda->nivel_D[banda->m] > banda->max_D;
-  puts("    Sensores leidos");
+  puts("   Sensores leidos");
 }
