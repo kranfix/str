@@ -14,8 +14,8 @@
 pid_handler_t p;
 planta_handler_t plant;
 
-void *status;           	       /* exit thread status */
-void *hilo_pid(void *);           /* declaro prototipo  */
+void *status;                 /* exit thread status */
+void *hilo_pid(void *);       /* declaro prototipo  */
 float simular_planta();       /* declaro prototipo */
 void controlar();
 
@@ -85,7 +85,7 @@ int main() {
     printf("%f\n ",y);
    }
 
-/* -------------------------------------------------*/
+  /* -------------------------------------------------*/
   /* espera hasta que el hilo lectura/impresor termine */
 
   if (pthread_join(rd1,&status)) {
