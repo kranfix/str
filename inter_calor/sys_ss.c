@@ -1,6 +1,6 @@
-#include "sys_c.h"
+#include "sys_ss.h"
 
-float sys_run(planta_handler_t * p, float u){
+float sys_run(ss_t * p, float u){
   float y = 0;
 
   for(int i = 0; i < p->dim; i++){

@@ -7,7 +7,7 @@ void pid_set(pid_handler_t * p, float kp, float ki, float kd, float T){
   p->T = T;
   p->u = 0;
   p->ui = 0;
-  p->u_max = 50;
+  p->u_max = 100;
   p->u_min = -p->u_max;
   p->e_last = 0;
 }
