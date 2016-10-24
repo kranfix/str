@@ -1,6 +1,7 @@
 #include <pthread.h>
 #include <unistd.h>
 #include <stdio.h>
+#include <stdlib.h>
 #include "planta.h"
 
 /* debug */
@@ -33,6 +34,12 @@ int main(){
   int a,b,d, e,f,g; // variables tratadas como booleanas
 
   pthread_t hiloX, hiloY, hiloC;
+
+  // initializo mutex
+  if (pthread_mutex_init(&buf.mutex,NULL)) {
+    printf("Error: no puede inicializar mutex\n");
+    exit(1);
+  }
 
   // atributo
   pthread_attr_t attr;
