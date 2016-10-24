@@ -17,12 +17,6 @@ int caja[10] = {80,90,100,101,99,110,40,50,76,20};
 /* Declaracion de las variables compartidas */
 struct{
   pthread_mutex_t mutex;
-  /*pthread_cond_t X_init;
-  pthread_cond_t X_done;
-  pthread_cond_t Y_init;
-  pthread_cond_t Y_done;
-  pthread_cond_t C_init;
-  pthread_cond_t C_done;*/
   int n;       // numero de cajas en la banda
   int N;       // numero de cajas a entregar
   int nivel_D; // nidel D de la caja entrante
@@ -90,7 +84,6 @@ int main(){
 /* Definciones de los procesos de los actuadores */
 void * robotX(){
   pthread_mutex_lock(&buf.mutex);
-  //pthread_cond_wait(&buf.X_init,&buf.mutex);
 
   if(buf.N > 0){
     runX(&banda,buf.nivel_D);
@@ -98,31 +91,26 @@ void * robotX(){
     buf.N--;
   }
 
-  //pthread_cond_signal(&buf.X_done);
   pthread_mutex_unlock(&buf.mutex);
   pthread_exit(NULL);
 }
 
 void * robotY(){
   pthread_mutex_lock(&buf.mutex);
-  //pthread_cond_wait(&buf.Y_init,&buf.mutex);
 
   runY(&banda);
   buf.n--;
 
-  //pthread_cond_signal(&buf.Y_done);
   pthread_mutex_unlock(&buf.mutex);
   pthread_exit(NULL);
 }
 
 void * pistonC(){
   pthread_mutex_lock(&buf.mutex);
-  //pthread_cond_wait(&buf.C_init,&buf.mutex);
 
   runC(&banda);
   buf.n--;
 
-  //pthread_cond_signal(&buf.C_done);
   pthread_mutex_unlock(&buf.mutex);
   pthread_exit(NULL);
 }
