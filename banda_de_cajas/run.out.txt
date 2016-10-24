@@ -1,0 +1,177 @@
+cc -o sim.elf main.c planta.o -lpthread
+./sim.elf
+Tiempo de ejecucion: 0
+   Leyendo sensores
+   Sensores leidos
+   Actuando brazo X
+   Robot X terminado
+    1	0	0	0	0	0
+    80	0	0	0	0	0
+   Actuando un paso de la banda
+   Paso de la banda terminado
+    0	1	0	0	0	0
+    0	80	0	0	0	0
+Tiempo de ejecucion: 1
+   Leyendo sensores
+   Sensores leidos
+   Actuando brazo X
+   Robot X terminado
+    1	1	0	0	0	0
+    90	80	0	0	0	0
+   Actuando un paso de la banda
+   Paso de la banda terminado
+    0	1	1	0	0	0
+    0	90	80	0	0	0
+Tiempo de ejecucion: 2
+   Leyendo sensores
+   Sensores leidos
+   Actuando brazo X
+   Robot X terminado
+    1	1	1	0	0	0
+    100	90	80	0	0	0
+   Actuando un paso de la banda
+   Paso de la banda terminado
+    0	1	1	1	0	0
+    0	100	90	80	0	0
+Tiempo de ejecucion: 3
+   Leyendo sensores
+   Sensores leidos
+   Actuando brazo X
+   Robot X terminado
+    1	1	1	1	0	0
+    101	100	90	80	0	0
+   Actuando un paso de la banda
+   Paso de la banda terminado
+    0	1	1	1	1	0
+    0	101	100	90	80	0
+Tiempo de ejecucion: 4
+   Leyendo sensores
+   Sensores leidos
+   Actuando brazo X
+   Robot X terminado
+    1	1	1	1	1	0
+    99	101	100	90	80	0
+   Actuando un paso de la banda
+   Paso de la banda terminado
+    0	1	1	1	1	1
+    0	99	101	100	90	80
+Tiempo de ejecucion: 5
+   Leyendo sensores
+   Sensores leidos
+   Actuando brazo X
+   Robot X terminado
+   Actuando brazo Y
+   Robot Y terminado
+    1	1	1	1	1	0
+    110	99	101	100	90	0
+   Actuando un paso de la banda
+   Paso de la banda terminado
+    0	1	1	1	1	1
+    0	110	99	101	100	90
+Tiempo de ejecucion: 6
+   Leyendo sensores
+   Sensores leidos
+   Actuando brazo X
+   Robot X terminado
+   Actuando brazo Y
+   Robot Y terminado
+   Actuando piston C
+   Piston C terminado
+    1	1	1	0	1	0
+    40	110	99	0	100	0
+   Actuando un paso de la banda
+   Paso de la banda terminado
+    0	1	1	1	0	1
+    0	40	110	99	0	100
+Tiempo de ejecucion: 7
+   Leyendo sensores
+   Sensores leidos
+   Actuando brazo X
+   Robot X terminado
+   Actuando brazo Y
+   Robot Y terminado
+    1	1	1	1	0	0
+    50	40	110	99	0	0
+   Actuando un paso de la banda
+   Paso de la banda terminado
+    0	1	1	1	1	0
+    0	50	40	110	99	0
+Tiempo de ejecucion: 8
+   Leyendo sensores
+   Sensores leidos
+   Actuando brazo X
+   Robot X terminado
+   Actuando piston C
+   Piston C terminado
+    1	1	1	0	1	0
+    76	50	40	0	99	0
+   Actuando un paso de la banda
+   Paso de la banda terminado
+    0	1	1	1	0	1
+    0	76	50	40	0	99
+Tiempo de ejecucion: 9
+   Leyendo sensores
+   Sensores leidos
+   Actuando brazo Y
+   Robot Y terminado
+   Actuando brazo X
+   Robot X terminado
+    1	1	1	1	0	0
+    20	76	50	40	0	0
+   Actuando un paso de la banda
+   Paso de la banda terminado
+    0	1	1	1	1	0
+    0	20	76	50	40	0
+Tiempo de ejecucion: 10
+   Leyendo sensores
+   Sensores leidos
+    0	1	1	1	1	0
+    0	20	76	50	40	0
+   Actuando un paso de la banda
+   Paso de la banda terminado
+    0	0	1	1	1	1
+    0	0	20	76	50	40
+Tiempo de ejecucion: 11
+   Leyendo sensores
+   Sensores leidos
+   Actuando brazo Y
+   Robot Y terminado
+    0	0	1	1	1	0
+    0	0	20	76	50	0
+   Actuando un paso de la banda
+   Paso de la banda terminado
+    0	0	0	1	1	1
+    0	0	0	20	76	50
+Tiempo de ejecucion: 12
+   Leyendo sensores
+   Sensores leidos
+   Actuando brazo Y
+   Robot Y terminado
+    0	0	0	1	1	0
+    0	0	0	20	76	0
+   Actuando un paso de la banda
+   Paso de la banda terminado
+    0	0	0	0	1	1
+    0	0	0	0	20	76
+Tiempo de ejecucion: 13
+   Leyendo sensores
+   Sensores leidos
+   Actuando brazo Y
+   Robot Y terminado
+    0	0	0	0	1	0
+    0	0	0	0	20	0
+   Actuando un paso de la banda
+   Paso de la banda terminado
+    0	0	0	0	0	1
+    0	0	0	0	0	20
+Tiempo de ejecucion: 14
+   Leyendo sensores
+   Sensores leidos
+   Actuando brazo Y
+   Robot Y terminado
+    0	0	0	0	0	0
+    0	0	0	0	0	0
+   Actuando un paso de la banda
+   Paso de la banda terminado
+    0	0	0	0	0	0
+    0	0	0	0	0	0
