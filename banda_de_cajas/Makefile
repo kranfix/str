@@ -1,6 +1,7 @@
 $(CC)=gcc
 
-sim.elf: planta.o
+sim.elf: main.c planta.o
+	$(CC) -o $@ $^ -lpthread
 
 planta.o: planta.c planta.h
 	$(CC) -c $<
