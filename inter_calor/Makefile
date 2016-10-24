@@ -15,7 +15,7 @@ pid.o: pid.c pid.h
 run: sim.elf
 	./sim.elf
 
-test.elf: test.c planta.o sys_ss.o
+test.elf: test.c planta.o sys_ss.o pid.o
 	$(CC) -o $@ $^
 
 test: test.elf
