@@ -53,16 +53,14 @@ int main(){
   for(i = 0; i < 30; i++){
     buf.temp_status = 1;
     pthread_create(&hiloT, &attr, controlar_temp, NULL);
-    for(j = 0; j < 20; i++){
+    for(j = 0; j < 20; j++){
       pthread_create(&hiloF, &attr, controlar_flujo, NULL);
       pthread_create(&hiloP, &attr, controlar_planta, NULL);
-
-      buf.temp_status = 0;
 
       pthread_join(hiloF, NULL);
       pthread_join(hiloP, NULL);
     }
-    pthread_join(hiloF, NULL);
+    pthread_join(hiloT, NULL);
   }
 
   pthread_attr_destroy(&attr);
@@ -81,8 +79,8 @@ void * controlar_temp(){
   pthread_cond_signal(&buf.cond_temp);
   pthread_mutex_unlock(&buf.mutex);
 
-  pthread_exit(NULL);
   puts("   Lazo de temperatura actualizado");
+  pthread_exit(NULL);
 }
 
 void * controlar_flujo(){
@@ -90,6 +88,7 @@ void * controlar_flujo(){
   pthread_mutex_lock(&buf.mutex);
   if(buf.temp_status){
     pthread_cond_wait(&buf.cond_temp,&buf.mutex);
+    buf.temp_status = 0;
   }
 
   float flujo = adquisicion_flujo();
@@ -97,8 +96,9 @@ void * controlar_flujo(){
 
   pthread_cond_signal(&buf.cond_flujo);
   pthread_mutex_unlock(&buf.mutex);
-  pthread_exit(NULL);
+
   puts("   Lazo de flujo actualizado");
+  pthread_exit(NULL);
 }
 
 void * controlar_planta(){
@@ -109,6 +109,7 @@ void * controlar_planta(){
   actuacion(pi_V.u);
 
   pthread_mutex_unlock(&buf.mutex);
-  pthread_exit(NULL);
+
   puts("   Planta actuada");
+  pthread_exit(NULL);
 }
